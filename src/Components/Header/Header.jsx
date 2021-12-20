@@ -6,19 +6,45 @@ const Header = () => {
    return ( 
       <header >
          <nav>
-            <ul>
-               <li><Link to="/">Home</Link></li>
+            <ul className='menu-list'>
+               <li><Link to="/">Picture</Link></li>
                <li><Link to="/">My lvl</Link></li>
                <li><Link to="/new">What's new</Link></li>
-               <li><Link to="/movies">Movies</Link></li>
-               <li><Link to="/serials">Serials</Link></li>
-               <li><Link to="/cartoons">Cartoons</Link></li>
-               <li><Link to="/tv+">TV+</Link></li>
+               <li><Link to="/movies">Movies</Link>
+                  <div className="dropdown-menu">
+                     <div className="dropdown-menu__body">
+                        
+                     </div>
+                  </div>
+               </li>
+               <li><Link to="/serials">Serials</Link>
+                  <div className="dropdown-menu">
+                     
+                  </div>
+               </li>
+               <li><Link to="/cartoons">Cartoons</Link>
+                  <div className="dropdown-menu">
+                     
+                  </div>
+               </li>
+               <li><Link to="/tv+">TV+</Link>
+                  <div className="dropdown-menu">
+                     
+                  </div>
+               </li>
             </ul>
-            <ul>
+            <ul className='menu-list'>
                <li><input type="search" id="search" /></li>
-               <li><MdNotifications /></li>
-               <li><Link to="/profile"><MdAccountBox /></Link></li>
+               <li><Link to="/"><MdNotifications /></Link>
+                  <div className="dropdown-menu">
+                     
+                  </div>
+               </li>
+               <li><Link to="/profile"><MdAccountBox /></Link>
+                  <div className="dropdown-menu">
+                     
+                  </div>
+               </li>
             </ul>
          </nav>
       </header>

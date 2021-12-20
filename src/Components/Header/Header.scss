@@ -1,12 +1,58 @@
 header {
    nav {
+      position: relative;
       display: flex;
       justify-content: space-between;
       align-items: center;
 
-      ul {
+      height: 72px;
+
+      .menu-list {
          display: flex;
          align-items: center;
+
+         li {
+            margin-right: 1em;
+
+            a {
+               transition: 0.3s ease;
+               &:hover {
+                  color: #fff;
+                  transition: 0.3s ease; 
+               }
+            }
+
+            &:last-child {
+               margin-right: 0;
+            }
+
+            &:hover > .dropdown-menu {
+               left: 0; right: 0; top: 0;
+               opacity: 1;
+               visibility: visible;
+            }
+
+            svg {
+               font-size: 1.6em;
+            }
+         }
+
+         .dropdown-menu {
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            z-index: -1;
+            transition: 0.3s ease-in-out;
+            width: 100%;
+
+            &__body {
+               background-color: #1f1b2e;
+               height: 460px;
+               width: 100%;
+               padding: 32px;
+               transition: 0.3s ease-in-out;
+            }
+         }
       }
    }
 }
